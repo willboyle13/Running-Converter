@@ -1,0 +1,776 @@
+{% extends 'Home/base.html' %}
+
+{% block content %}
+
+<div style=" padding:2em; background-color: #3351a6; border-radius: 25px; margin: auto;">
+{% if error %}
+<div class="alert alert-danger alert-dismissible" role="alert">
+    <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+    {{ error }}
+</div>
+{% endif %}
+
+<div class="container text-center">
+	<h1>Indoor Track Conversions</h1>
+	<br>
+	<h5>
+		Step 1: Select gender
+	</h5>
+	<h5>
+		Step 2: Select track
+	</h5>
+	<h5>
+		Step 3: Select event
+	</h5>
+	<h5>
+		Step 4: Enter performance
+	</h5>
+	<h5>
+		Step 5: Convert!
+	</h5>
+
+	<!--Displays results-->
+	<div>
+		<!--Undersized-->
+		<div>
+			<!--200m-->
+			<div>
+				{% if undertwohundred %}
+				<div class="alert alert-success" role="alert">
+
+					<h1>{{ original }} for 200m converts to...</h1>
+					<ul>
+						<li>Flat: {{ Flat }}</li>
+						<li>Banked/Ovesized: {{ BOS }}</li>
+					</ul>
+				</div>
+				{% endif %}
+			</div>
+			<!--300m-->
+			<div>
+				{% if underthreehundred %}
+				<div class="alert alert-success" role="alert">
+
+					<h1>{{ original }} for 300m converts to...</h1>
+					<ul>
+						<li>Flat: {{ Flat }}</li>
+						<li>Banked/Ovesized: {{ BOS }}</li>
+					</ul>
+				</div>
+				{% endif %}
+			</div>
+			<!--400m-->
+			<div>
+				{% if underfourhundred %}
+				<div class="alert alert-success" role="alert">
+
+					<h1>{{ original }} for 400m converts to...</h1>
+					<ul>
+						<li>Flat: {{ Flat }}</li>
+						<li>Banked/Ovesized: {{ BOS }}</li>
+					</ul>
+				</div>
+				{% endif %}
+			</div>
+			<!--500m-->
+			<div>
+				{% if underfivehundred %}
+				<div class="alert alert-success" role="alert">
+
+					<h1>{{ original }} for 500m converts to...</h1>
+					<ul>
+						<li>Flat: {{ Flat }}</li>
+						<li>Banked/Ovesized: {{ BOS }}</li>
+					</ul>
+				</div>
+				{% endif %}
+			</div>
+			<!--600y-->
+			<div>
+				{% if undersixhundredy %}
+				<div class="alert alert-success" role="alert">
+
+					<h1>{{ original }} for 600y converts to...</h1>
+					<ul>
+						<li>Flat: {{ Flat }}</li>
+						<li>Banked/Ovesized: {{ BOS }}</li>
+					</ul>
+				</div>
+				{% endif %}
+			</div>
+			<!--600m-->
+			<div>
+				{% if undersixhundred %}
+				<div class="alert alert-success" role="alert">
+
+					<h1>{{ original }} for 600m converts to...</h1>
+					<ul>
+						<li>Flat: {{ Flat }}</li>
+						<li>Banked/Ovesized: {{ BOS }}</li>
+					</ul>
+				</div>
+				{% endif %}
+			</div>
+			<!--800m-->
+			<div>
+				{% if undereighthundred %}
+				<div class="alert alert-success" role="alert">
+
+					<h1>{{ original }} for 800m converts to...</h1>
+					<ul>
+						<li>Flat: {{ Flat }}</li>
+						<li>Banked/Ovesized: {{ BOS }}</li>
+					</ul>
+				</div>
+				{% endif %}
+			</div>
+			<!--1000m-->
+			<div>
+				{% if underonethousand %}
+				<div class="alert alert-success" role="alert">
+
+					<h1>{{ original }} for 1000m converts to...</h1>
+					<ul>
+						<li>Flat: {{ Flat }}</li>
+						<li>Banked/Ovesized: {{ BOS }}</li>
+					</ul>
+				</div>
+				{% endif %}
+			</div>
+			<!--1500m-->
+			<div>
+				{% if underfifteenhundred %}
+				<div class="alert alert-success" role="alert">
+
+					<h1>{{ original }} for 1500m converts to...</h1>
+					<ul>
+						<li>Flat: {{ Flat }}</li>
+						<li>Banked/Ovesized: {{ BOS }}</li>
+					</ul>
+				</div>
+				{% endif %}
+			</div>
+			<!--Mile-->
+			<div>
+				{% if undermile %}
+				<div class="alert alert-success" role="alert">
+
+					<h1>{{ original }} for a Mile converts to...</h1>
+					<ul>
+						<li>Flat: {{ Flat }}</li>
+						<li>Banked/Ovesized: {{ BOS }}</li>
+					</ul>
+				</div>
+				{% endif %}
+			</div>
+			<!--3000m-->
+			<div>
+				{% if underthreethousand %}
+				<div class="alert alert-success" role="alert">
+
+					<h1>{{ original }} for 3000m converts to...</h1>
+					<ul>
+						<li>Flat: {{ Flat }}</li>
+						<li>Banked/Ovesized: {{ BOS }}</li>
+					</ul>
+				</div>
+				{% endif %}
+			</div>
+			<!--5000m-->
+			<div>
+				{% if underfivethousand %}
+				<div class="alert alert-success" role="alert">
+
+					<h1>{{ original }} for 5000m converts to...</h1>
+					<ul>
+						<li>Flat: {{ Flat }}</li>
+						<li>Banked/Ovesized: {{ BOS }}</li>
+					</ul>
+				</div>
+				{% endif %}
+			</div>
+			<!--4x200m-->
+			<div>
+				{% if underfourbytwo %}
+				<div class="alert alert-success" role="alert">
+
+					<h1>{{ original }} for 4x200m converts to...</h1>
+					<ul>
+						<li>Flat: {{ Flat }}</li>
+						<li>Banked/Ovesized: {{ BOS }}</li>
+					</ul>
+				</div>
+				{% endif %}
+			</div>
+			<!--4x400m-->
+			<div>
+				{% if underfourbyfour %}
+				<div class="alert alert-success" role="alert">
+
+					<h1>{{ original }} for 4x400m converts to...</h1>
+					<ul>
+						<li>Flat: {{ Flat }}</li>
+						<li>Banked/Ovesized: {{ BOS }}</li>
+					</ul>
+				</div>
+				{% endif %}
+			</div>
+			<!--4x800m-->
+			<div>
+				{% if underfourbyeight %}
+				<div class="alert alert-success" role="alert">
+
+					<h1>{{ original }} for 4x800m converts to...</h1>
+					<ul>
+						<li>Flat: {{ Flat }}</li>
+						<li>Banked/Ovesized: {{ BOS }}</li>
+					</ul>
+				</div>
+				{% endif %}
+			</div>
+			<!--DMR-->
+			<div>
+				{% if underDMR %}
+				<div class="alert alert-success" role="alert">
+
+					<h1>{{ original }} for DMR converts to...</h1>
+					<ul>
+						<li>Flat: {{ Flat }}</li>
+						<li>Banked/Ovesized: {{ BOS }}</li>
+					</ul>
+				</div>
+				{% endif %}
+			</div>
+		</div>
+
+		<!--Flat-->
+		<div>
+			<!--200m-->
+			<div>
+				{% if flattwohundred %}
+				<div class="alert alert-success" role="alert">
+
+					<h1>{{ original }} for 200m converts to...</h1>
+					<ul>
+						<li>Undersized: {{ Undersized }}</li>
+						<li>Banked/Ovesized: {{ BOS }}</li>
+					</ul>
+				</div>
+				{% endif %}
+			</div>
+			<!--300m-->
+			<div>
+				{% if flatthreehundred %}
+				<div class="alert alert-success" role="alert">
+
+					<h1>{{ original }} for 300m converts to...</h1>
+					<ul>
+						<li>Undersized: {{ Undersized }}</li>
+						<li>Banked/Ovesized: {{ BOS }}</li>
+					</ul>
+				</div>
+				{% endif %}
+			</div>
+			<!--400m-->
+			<div>
+				{% if flatfourhundred %}
+				<div class="alert alert-success" role="alert">
+
+					<h1>{{ original }} for 400m converts to...</h1>
+					<ul>
+						<li>Undersized: {{ Undersized }}</li>
+						<li>Banked/Ovesized: {{ BOS }}</li>
+					</ul>
+				</div>
+				{% endif %}
+			</div>
+			<!--500m-->
+			<div>
+				{% if flatfivehundred %}
+				<div class="alert alert-success" role="alert">
+
+					<h1>{{ original }} for 500m converts to...</h1>
+					<ul>
+						<li>Undersized: {{ Undersized }}</li>
+						<li>Banked/Ovesized: {{ BOS }}</li>
+					</ul>
+				</div>
+				{% endif %}
+			</div>
+			<!--600y-->
+			<div>
+				{% if flatsixhundredy %}
+				<div class="alert alert-success" role="alert">
+
+					<h1>{{ original }} for 600y converts to...</h1>
+					<ul>
+						<li>Undersized: {{ Undersized }}</li>
+						<li>Banked/Ovesized: {{ BOS }}</li>
+					</ul>
+				</div>
+				{% endif %}
+			</div>
+			<!--600m-->
+			<div>
+				{% if flatsixhundred %}
+				<div class="alert alert-success" role="alert">
+
+					<h1>{{ original }} for 600m converts to...</h1>
+					<ul>
+						<li>Undersized: {{ Undersized }}</li>
+						<li>Banked/Ovesized: {{ BOS }}</li>
+					</ul>
+				</div>
+				{% endif %}
+			</div>
+			<!--800m-->
+			<div>
+				{% if flateighthundred %}
+				<div class="alert alert-success" role="alert">
+
+					<h1>{{ original }} for 800m converts to...</h1>
+					<ul>
+						<li>Undersized: {{ Undersized }}</li>
+						<li>Banked/Ovesized: {{ BOS }}</li>
+					</ul>
+				</div>
+				{% endif %}
+			</div>
+			<!--1000m-->
+			<div>
+				{% if flatonethousand %}
+				<div class="alert alert-success" role="alert">
+
+					<h1>{{ original }} for 1000m converts to...</h1>
+					<ul>
+						<li>Undersized: {{ Undersized }}</li>
+						<li>Banked/Ovesized: {{ BOS }}</li>
+					</ul>
+				</div>
+				{% endif %}
+			</div>
+			<!--1500m-->
+			<div>
+				{% if flatfifteenhundred %}
+				<div class="alert alert-success" role="alert">
+
+					<h1>{{ original }} for 1500m converts to...</h1>
+					<ul>
+						<li>Undersized: {{ Undersized }}</li>
+						<li>Banked/Ovesized: {{ BOS }}</li>
+					</ul>
+				</div>
+				{% endif %}
+			</div>
+			<!--Mile-->
+			<div>
+				{% if flatmile %}
+				<div class="alert alert-success" role="alert">
+
+					<h1>{{ original }} for a Mile converts to...</h1>
+					<ul>
+						<li>Undersized: {{ Undersized }}</li>
+						<li>Banked/Ovesized: {{ BOS }}</li>
+					</ul>
+				</div>
+				{% endif %}
+			</div>
+			<!--3000m-->
+			<div>
+				{% if flatthreethousand %}
+				<div class="alert alert-success" role="alert">
+
+					<h1>{{ original }} for 3000m converts to...</h1>
+					<ul>
+						<li>Undersized: {{ Undersized }}</li>
+						<li>Banked/Ovesized: {{ BOS }}</li>
+					</ul>
+				</div>
+				{% endif %}
+			</div>
+			<!--5000m-->
+			<div>
+				{% if flatfivethousand %}
+				<div class="alert alert-success" role="alert">
+
+					<h1>{{ original }} for 5000m converts to...</h1>
+					<ul>
+						<li>Undersized: {{ Undersized }}</li>
+						<li>Banked/Ovesized: {{ BOS }}</li>
+					</ul>
+				</div>
+				{% endif %}
+			</div>
+			<!--4x200m-->
+			<div>
+				{% if flatfourbytwo %}
+				<div class="alert alert-success" role="alert">
+
+					<h1>{{ original }} for 4x200m converts to...</h1>
+					<ul>
+						<li>Undersized: {{ Undersized }}</li>
+						<li>Banked/Ovesized: {{ BOS }}</li>
+					</ul>
+				</div>
+				{% endif %}
+			</div>
+			<!--4x400m-->
+			<div>
+				{% if flatfourbyfour %}
+				<div class="alert alert-success" role="alert">
+
+					<h1>{{ original }} for 4x400m converts to...</h1>
+					<ul>
+						<li>Undersized: {{ Undersized }}</li>
+						<li>Banked/Ovesized: {{ BOS }}</li>
+					</ul>
+				</div>
+				{% endif %}
+			</div>
+			<!--4x800m-->
+			<div>
+				{% if flatfourbyeight %}
+				<div class="alert alert-success" role="alert">
+
+					<h1>{{ original }} for 4x800m converts to...</h1>
+					<ul>
+						<li>Undersized: {{ Undersized }}</li>
+						<li>Banked/Ovesized: {{ BOS }}</li>
+					</ul>
+				</div>
+				{% endif %}
+			</div>
+			<!--DMR-->
+			<div>
+				{% if flatDMR %}
+				<div class="alert alert-success" role="alert">
+
+					<h1>{{ original }} for the DMR converts to...</h1>
+					<ul>
+						<li>Undersized: {{ Undersized }}</li>
+						<li>Banked/Ovesized: {{ BOS }}</li>
+					</ul>
+				</div>
+				{% endif %}
+			</div>
+		</div>
+		<!--Banked/Oversized-->
+		<div>
+			<!--200m-->
+			<div>
+				{% if bostwohundred %}
+				<div class="alert alert-success" role="alert">
+
+					<h1>{{ original }} for 200m converts to...</h1>
+					<ul>
+						<li>Undersized: {{ Undersized }}</li>
+						<li>Flat: {{ Flat }}</li>
+					</ul>
+				</div>
+				{% endif %}
+			</div>
+			<!--300m-->
+			<div>
+				{% if bosthreehundred %}
+				<div class="alert alert-success" role="alert">
+
+					<h1>{{ original }} for 300m converts to...</h1>
+					<ul>
+						<li>Undersized: {{ Undersized }}</li>
+						<li>Flat: {{ Flat }}</li>
+					</ul>
+				</div>
+				{% endif %}
+			</div>
+			<!--400m-->
+			<div>
+				{% if bosfourhundred %}
+				<div class="alert alert-success" role="alert">
+
+					<h1>{{ original }} for 400m converts to...</h1>
+					<ul>
+						<li>Undersized: {{ Undersized }}</li>
+						<li>Flat: {{ Flat }}</li>
+					</ul>
+				</div>
+				{% endif %}
+			</div>
+			<!--500m-->
+			<div>
+				{% if bosfivehundred %}
+				<div class="alert alert-success" role="alert">
+
+					<h1>{{ original }} for 500m converts to...</h1>
+					<ul>
+						<li>Undersized: {{ Undersized }}</li>
+						<li>Flat: {{ Flat }}</li>
+					</ul>
+				</div>
+				{% endif %}
+			</div>
+			<!--600y-->
+			<div>
+				{% if bossixhundredy %}
+				<div class="alert alert-success" role="alert">
+
+					<h1>{{ original }} for 600y converts to...</h1>
+					<ul>
+						<li>Undersized: {{ Undersized }}</li>
+						<li>Flat: {{ Flat }}</li>
+					</ul>
+				</div>
+				{% endif %}
+			</div>
+			<!--600m-->
+			<div>
+				{% if bossixhundred %}
+				<div class="alert alert-success" role="alert">
+
+					<h1>{{ original }} for 600m converts to...</h1>
+					<ul>
+						<li>Undersized: {{ Undersized }}</li>
+						<li>Flat: {{ Flat }}</li>
+					</ul>
+				</div>
+				{% endif %}
+			</div>
+			<!--800m-->
+			<div>
+				{% if boseighthundred %}
+				<div class="alert alert-success" role="alert">
+
+					<h1>{{ original }} for 800m converts to...</h1>
+					<ul>
+						<li>Undersized: {{ Undersized }}</li>
+						<li>Flat: {{ Flat }}</li>
+					</ul>
+				</div>
+				{% endif %}
+			</div>
+			<!--1000m-->
+			<div>
+				{% if bosonethousand %}
+				<div class="alert alert-success" role="alert">
+
+					<h1>{{ original }} for 1000m converts to...</h1>
+					<ul>
+						<li>Undersized: {{ Undersized }}</li>
+						<li>Flat: {{ Flat }}</li>
+					</ul>
+				</div>
+				{% endif %}
+			</div>
+			<!--1500m-->
+			<div>
+				{% if bosfifteenhundred %}
+				<div class="alert alert-success" role="alert">
+
+					<h1>{{ original }} for 1500m converts to...</h1>
+					<ul>
+						<li>Undersized: {{ Undersized }}</li>
+						<li>Flat: {{ Flat }}</li>
+					</ul>
+				</div>
+				{% endif %}
+			</div>
+			<!--Mile-->
+			<div>
+				{% if bosmile %}
+				<div class="alert alert-success" role="alert">
+
+					<h1>{{ original }} for a Mile converts to...</h1>
+					<ul>
+						<li>Undersized: {{ Undersized }}</li>
+						<li>Flat: {{ Flat }}</li>
+					</ul>
+				</div>
+				{% endif %}
+			</div>
+			<!--3000m-->
+			<div>
+				{% if bosthreethousand %}
+				<div class="alert alert-success" role="alert">
+
+					<h1>{{ original }} for 3000m converts to...</h1>
+					<ul>
+						<li>Undersized: {{ Undersized }}</li>
+						<li>Flat: {{ Flat }}</li>
+					</ul>
+				</div>
+				{% endif %}
+			</div>
+			<!--5000m-->
+			<div>
+				{% if bosfivethousand %}
+				<div class="alert alert-success" role="alert">
+
+					<h1>{{ original }} for 5000m converts to...</h1>
+					<ul>
+						<li>Undersized: {{ Undersized }}</li>
+						<li>Flat: {{ Flat }}</li>
+					</ul>
+				</div>
+				{% endif %}
+			</div>
+			<!--4x200m-->
+			<div>
+				{% if bosfourbytwo %}
+				<div class="alert alert-success" role="alert">
+
+					<h1>{{ original }} for 4x200m converts to...</h1>
+					<ul>
+						<li>Undersized: {{ Undersized }}</li>
+						<li>Flat: {{ Flat }}</li>
+					</ul>
+				</div>
+				{% endif %}
+			</div>
+			<!--4x400m-->
+			<div>
+				{% if bosfourbyfour %}
+				<div class="alert alert-success" role="alert">
+
+					<h1>{{ original }} for 4x400m converts to...</h1>
+					<ul>
+						<li>Undersized: {{ Undersized }}</li>
+						<li>Flat: {{ Flat }}</li>
+					</ul>
+				</div>
+				{% endif %}
+			</div>
+			<!--4x800m-->
+			<div>
+				{% if bosfourbyeight %}
+				<div class="alert alert-success" role="alert">
+
+					<h1>{{ original }} for 4x800m converts to...</h1>
+					<ul>
+						<li>Undersized: {{ Undersized }}</li>
+						<li>Flat: {{ Flat }}</li>
+					</ul>
+				</div>
+				{% endif %}
+			</div>
+			<!--DMR-->
+			<div>
+				{% if bosDMR %}
+				<div class="alert alert-success" role="alert">
+
+					<h1>{{ original }} for the DMR converts to...</h1>
+					<ul>
+						<li>Undersized: {{ Undersized }}</li>
+						<li>Flat: {{ Flat }}</li>
+					</ul>
+				</div>
+				{% endif %}
+			</div>
+		</div>
+	</div>
+	<br>
+	<div style="margin: auto;">
+		<button style="background-color: #dedede;" type="button" class="btn dropdown-toggle" data-toggle="collapse" data-target="#mens">Men's</button>
+		<div id="mens" class="collapse">
+			<form action="{% url 'mens' %}" method="GET">
+					<div class="Event conversion dropdown">
+						<label for="tracktype">Select Track</label>
+						<div class="input">
+							<select style="width: auto;"class="custom-select" id="tracktype" name="tracktype" required>
+								<option value=""></option>
+								<option value="Undersized">Undersized</option>
+								<option value="Flat">Flat</option>
+								<option value="BOS">Banked/Oversized</option>
+							</select>
+							<br>
+							<label for="events">Select Event</label>
+							<br>
+							<select style="width: auto;"class="custom-select overflow-auto" id="events" name="events" required>
+								<option value=""></option>
+								<option value="200m">200m</option>
+								<option value="300m">300m</option>
+								<option value="400m">400m</option>
+								<option value="500m">500m</option>
+								<option value="600y">600y</option>
+								<option value="600m">600m</option>
+								<option value="800m">800m</option>
+								<option value="1000m">1000m</option>
+								<option value="1500m">1500m</option>
+								<option value="Mile">Mile</option>
+								<option value="3000m">3000m</option>
+								<option value="5000m">5000m</option>
+								<option value="4x200m">4x200m</option>
+								<option value="4x400m">4x400m</option>
+								<option value="4x800m">4x800m</option>
+								<option value="DMR">DMR</option>
+							</select>
+						</div>
+					</div>
+					<div class="time input">
+						<label for="time">Enter your time</label>
+						<div class="d-flex justify-content-center">
+							<input class="form-control" style="width: auto; text-align: center; margin: auto;" id="time" name="time" type="text" value="" placeholder="Your time"/>
+						</div>
+					</div>
+					<div style="margin: 10px;">
+						<button style="margin: auto;" type="submit" value="convert" class="btn btn-success">
+							Convert
+						</button>
+					</div>
+				</form>
+		</div>
+	</div>
+	<br>
+	<div style="margin: auto;">
+		<button style="background-color: #dedede;" type="button" class="btn dropdown-toggle" data-toggle="collapse" data-target="#womens">Women's</button>
+		<div id="womens" class="collapse">
+			<form action="{% url 'womens' %}" method="GET">
+					<div class="Event conversion dropdown">
+						<label for="tracktype">Select Track</label>
+						<div class="input">
+							<select style="width: auto;"class="custom-select" id="tracktype" name="tracktype" required>
+								<option value=""></option>
+								<option value="Undersized">Undersized</option>
+								<option value="Flat">Flat</option>
+								<option value="BOS">Banked/Oversized</option>
+							</select>
+							<br>
+							<label for="events">Select Event</label>
+							<br>
+							<select style="width: auto;"class="custom-select" id="events" name="events" required>
+								<option value=""></option>
+								<option value="200m">200m</option>
+								<option value="300m">300m</option>
+								<option value="400m">400m</option>
+								<option value="500m">500m</option>
+								<option value="600y">600y</option>
+								<option value="600m">600m</option>
+								<option value="800m">800m</option>
+								<option value="1000m">1000m</option>
+								<option value="1500m">1500m</option>
+								<option value="Mile">Mile</option>
+								<option value="3000m">3000m</option>
+								<option value="5000m">5000m</option>
+								<option value="4x200m">4x200m</option>
+								<option value="4x400m">4x400m</option>
+								<option value="4x800m">4x800m</option>
+								<option value="DMR">DMR</option>
+							</select>
+						</div>
+					</div>
+					<div class="time input">
+						<label for="time">Enter your time</label>
+						<div class="d-flex justify-content-center">
+							<input class="form-control" style="width: auto; text-align: center; margin: auto;" id="time" name="time" type="text" value="" placeholder="Your time"/>
+						</div>
+					</div>
+					<div style="margin: 10px;">
+						<button style="margin: auto;" type="submit" value="convert" class="btn btn-success">
+							Convert
+						</button>
+					</div>
+				</form>
+		</div>
+	</div>
+
+</div>
+</div>
+{% endblock %}

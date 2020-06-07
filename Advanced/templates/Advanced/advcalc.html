@@ -1,0 +1,318 @@
+{% extends 'Home/base.html' %}
+
+
+{% block content %}
+{% load static %}
+<link rel="shortcut icon" href="static/Advanced/fltclogo.jpg">
+
+<div style=" padding:2em; background-color: #3351a6; border-radius: 25px; margin: auto;">
+{% if error %}
+<div class="alert alert-danger alert-dismissible" role="alert">
+	<a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+	{{ error }}
+</div>
+{% endif %}
+
+<div class="container text-center">
+	<h1 style="margin: auto;">Advanced Conversion Calculator</h1>
+	<br>
+	<div style="margin: auto;">
+		<h5>
+			Step 1: Select event group
+		</h5>
+		<h5>
+			Step 2: Select events to convert
+		</h5>
+		<h5>
+			Step 3: Enter performance
+		</h5>
+		<h5>
+			Step 4: Convert!
+		</h5>
+	</div>
+	<br>
+	{% if original %}
+	{% if result %}
+
+	<div class="alert alert-success" role="alert">
+
+		<h1>{{ original }} converts to... {{ result }}</h1>
+
+	</div>
+	{% endif %}
+	{% endif %}
+	<!--8/15 class-->
+	<div style="margin: auto;">
+		<button style="background-color: #dedede;" data-toggle="collapse"  class="btn dropdown-toggle" data-target="#eightFifteen" >800m/1500m</button> 
+		<div id="eightFifteen" class="collapse" >
+			<form action="{% url 'eightFift' %}" method="GET">
+				<div class="Event conversion dropdown">
+					<label for="events">Select events</label>
+					<div class="input">
+						<select style="width: auto;"  class="custom-select" id="events" name="events" required>
+							<option value=""></option>
+							<option value="800m-1500m">800m->1500m</option>
+							<option value="1500m-800m">1500m->800m</option>
+							<option value="1500m-3000m">1500m->3000m</option>
+							<option value="3000m-1500m">3000m->1500m</option>
+							<option value="1500m-5000m">1500m->5000m</option>
+							<option value="5000m-1500m">5000m->1500m</option>
+							<option value="3000m-5000m">3000m->5000m</option>
+							<option value="5000m-3000m">5000m->3000m</option>
+						</select>
+					</div>
+				</div>
+				<div class="time input">
+					<label for="time">Enter your time</label>
+					<div class="d-flex justify-content-center">
+						<input class="form-control" style="width: auto; text-align: center; margin: auto;" id="time" name="time" type="text" value="" placeholder="Your time"/>
+					</div>
+				</div>
+				<div style="margin: 10px;">
+					<button style="margin: auto;" type="submit" value="convert" class="btn btn-success">
+						Convert
+					</button>
+				</div>
+			</form>
+		</div>
+	</div>
+	<br>
+	<!--8/15* class-->
+	<div style="margin: auto;">
+		<button style="background-color: #dedede;" data-toggle="collapse"  class="btn dropdown-toggle" data-target="#eightMoreFifteen" >1000m/1500m</button> 
+		<div id="eightMoreFifteen" class="collapse">
+			<form action="{% url 'eightMoreFift' %}" method="GET">
+				<div class="Event conversion dropdown">
+					<label for="events">Select events</label>
+					<div class="input">
+						<select style="width: auto;"  class="custom-select" id="events" name="events" required>
+							<option value=""></option>
+							<option value="800m-1500m">800m->1500m</option>
+							<option value="1500m-800m">1500m->800m</option>
+							<option value="1500m-3000m">1500m->3000m</option>
+							<option value="3000m-1500m">3000m->1500m</option>
+							<option value="1500m-5000m">1500m->5000m</option>
+							<option value="5000m-1500m">5000m->1500m</option>
+							<option value="3000m-5000m">3000m->5000m</option>
+							<option value="5000m-3000m">5000m->3000m</option>
+						</select>
+					</div>
+				</div>
+				<div class="time input">
+					<label for="time">Enter your time</label>
+					<div class="d-flex justify-content-center">
+						<input class="form-control" style="width: auto; text-align: center; margin: auto;" id="time" name="time" type="text" value="" placeholder="Your time"/>
+					</div>
+				</div>
+				<div style="margin: 10px;">
+					<button style="margin: auto;" type="submit" value="convert" class="btn btn-success">
+						Convert
+					</button>
+				</div>
+			</form>
+		</div>
+	</div>
+	<br>
+	<!--1500m class-->
+	<div style="margin: auto;">
+		<button style="background-color: #dedede;" data-toggle="collapse"  class="btn dropdown-toggle" data-target="#fifteen" >1500m</button> 
+		<div id="fifteen" class="collapse">
+			<form action="{% url 'fifteen' %}" method="GET">
+				<div class="Event conversion dropdown">
+					<label for="events">Select events</label>
+					<div class="input">
+						<select style="width: auto;"  class="custom-select" id="events" name="events" required>
+							<option value=""></option>
+							<option value="800m-1500m">800m->1500m</option>
+							<option value="1500m-800m">1500m->800m</option>
+							<option value="1500m-3000m">1500m->3000m</option>
+							<option value="3000m-1500m">3000m->1500m</option>
+							<option value="1500m-5000m">1500m->5000m</option>
+							<option value="5000m-1500m">5000m->1500m</option>
+							<option value="3000m-5000m">3000m->5000m</option>
+							<option value="5000m-3000m">5000m->3000m</option>
+							<option value="5000m-10000m">5000m->10000m</option>
+							<option value="10000m-5000m">10000m->5000m</option>
+							<option value="1500m-10000m">1500m->10000m</option>
+							<option value="10000m-1500m">10000m->1500m</option>
+						</select>
+					</div>
+				</div>
+				<div class="time input">
+					<label for="time">Enter your time</label>
+					<div class="d-flex justify-content-center">
+						<input class="form-control" style="width: auto; text-align: center; margin: auto;" id="time" name="time" type="text" value="" placeholder="Your time"/>
+					</div>
+				</div>
+				<div style="margin: 10px;">
+					<button style="margin: auto;" type="submit" value="convert" class="btn btn-success">
+						Convert
+					</button>
+				</div>
+			</form>
+		</div>
+	</div>
+	<br>
+	<!--1500m/5000m class-->
+	<div style="margin: auto;">
+		<button style="background-color: #dedede;" data-toggle="collapse"  class="btn dropdown-toggle" data-target="#fifteenFive" >1500m/5000m</button> 
+		<div id="fifteenFive" class="collapse">
+			<form action="{% url 'fifteenFive' %}" method="GET">
+				<div class="Event conversion dropdown">
+					<label for="events">Select events</label>
+					<div class="input">
+						<select style="width: auto;"  class="custom-select" id="events" name="events" required>
+							<option value=""></option>
+							<option value="800m-1500m">800m->1500m</option>
+							<option value="1500m-800m">1500m->800m</option>
+							<option value="1500m-3000m">1500m->3000m</option>
+							<option value="3000m-1500m">3000m->1500m</option>
+							<option value="1500m-5000m">1500m->5000m</option>
+							<option value="5000m-1500m">5000m->1500m</option>
+							<option value="3000m-5000m">3000m->5000m</option>
+							<option value="5000m-3000m">5000m->3000m</option>
+							<option value="5000m-10000m">5000m->10000m</option>
+							<option value="10000m-5000m">10000m->5000m</option>
+							<option value="1500m-10000m">1500m->10000m</option>
+							<option value="10000m-1500m">10000m->1500m</option>
+						</select>
+					</div>
+				</div>
+				<div class="time input">
+					<label for="time">Enter your time</label>
+					<div class="d-flex justify-content-center">
+						<input class="form-control" style="width: auto; text-align: center; margin: auto;" id="time" name="time" type="text" value="" placeholder="Your time"/>
+					</div>
+				</div>
+				<div style="margin: 10px;">
+					<button style="margin: auto;" type="submit" value="convert" class="btn btn-success">
+						Convert
+					</button>
+				</div>
+			</form>
+		</div>
+	</div>
+	<br>
+	<!--5000m class-->
+	<div style="margin: auto;">
+		<button style="background-color: #dedede;" data-toggle="collapse"  class="btn dropdown-toggle" data-target="#five" >5000m</button> 
+		<div id="five" class="collapse">
+			<form action="{% url 'five' %}" method="GET">
+				<div class="Event conversion dropdown">
+					<label for="events">Select events</label>
+					<div class="input">
+						<select style="width: auto;"  class="custom-select" id="events" name="events" required>
+							<option value=""></option>
+							<option value="800m-1500m">800m->1500m</option>
+							<option value="1500m-800m">1500m->800m</option>
+							<option value="1500m-3000m">1500m->3000m</option>
+							<option value="3000m-1500m">3000m->1500m</option>
+							<option value="1500m-5000m">1500m->5000m</option>
+							<option value="5000m-1500m">5000m->1500m</option>
+							<option value="3000m-5000m">3000m->5000m</option>
+							<option value="5000m-3000m">5000m->3000m</option>
+							<option value="5000m-10000m">5000m->10000m</option>
+							<option value="10000m-5000m">10000m->5000m</option>
+							<option value="1500m-10000m">1500m->10000m</option>
+							<option value="10000m-1500m">10000m->1500m</option>
+						</select>
+					</div>
+				</div>
+				<div class="time input">
+					<label for="time">Enter your time</label>
+					<div class="d-flex justify-content-center">
+						<input class="form-control" style="width: auto; text-align: center; margin: auto;" id="time" name="time" type="text" value="" placeholder="Your time"/>
+					</div>
+				</div>
+				<div style="margin: 10px;">
+					<button style="margin: auto;" type="submit" value="convert" class="btn btn-success">
+						Convert
+					</button>
+				</div>
+			</form>
+		</div>
+	</div>
+	<br>
+	<!--5000m/10000m class-->
+	<div style="margin: auto;">
+		<button style="background-color: #dedede;" data-toggle="collapse"  class="btn dropdown-toggle" data-target="#fiveTen" >5000m/10000m</button> 
+		<div id="fiveTen" class="collapse">
+			<form action="{% url 'fiveTen' %}" method="GET">
+				<div class="Event conversion dropdown">
+					<label for="events">Select events</label>
+					<div class="input">
+						<select style="width: auto;"  class="custom-select" id="events" name="events" required>
+							<option value=""></option>
+							<option value="800m-1500m">800m->1500m</option>
+							<option value="1500m-800m">1500m->800m</option>
+							<option value="1500m-3000m">1500m->3000m</option>
+							<option value="3000m-1500m">3000m->1500m</option>
+							<option value="1500m-5000m">1500m->5000m</option>
+							<option value="5000m-1500m">5000m->1500m</option>
+							<option value="3000m-5000m">3000m->5000m</option>
+							<option value="5000m-3000m">5000m->3000m</option>
+							<option value="5000m-10000m">5000m->10000m</option>
+							<option value="10000m-5000m">10000m->5000m</option>
+							<option value="1500m-10000m">1500m->10000m</option>
+							<option value="10000m-1500m">10000m->1500m</option>
+						</select>
+					</div>
+				</div>
+				<div class="time input">
+					<label for="time">Enter your time</label>
+					<div class="d-flex justify-content-center">
+						<input class="form-control" style="width: auto; text-align: center; margin: auto;" id="time" name="time" type="text" value="" placeholder="Your time"/>
+					</div>
+				</div>
+				<div style="margin: 10px;">
+					<button style="margin: auto;" type="submit" value="convert" class="btn btn-success">
+						Convert
+					</button>
+				</div>
+			</form>
+		</div>
+	</div>
+	<br>
+	<!--10000m class-->
+	<div style="margin: auto;">
+		<button style="background-color: #dedede;" data-toggle="collapse"  class="btn dropdown-toggle" data-target="#ten" >10000m</button> 
+		<div id="ten" class="collapse">
+			<form action="{% url 'ten' %}" method="GET">
+				<div class="Event conversion dropdown">
+					<label for="events">Select events</label>
+					<div class="input">
+						<select style="width: auto;"  class="custom-select" id="events" name="events" required>
+							<option value=""></option>
+							<option value="800m-1500m">800m->1500m</option>
+							<option value="1500m-800m">1500m->800m</option>
+							<option value="1500m-3000m">1500m->3000m</option>
+							<option value="3000m-1500m">3000m->1500m</option>
+							<option value="1500m-5000m">1500m->5000m</option>
+							<option value="5000m-1500m">5000m->1500m</option>
+							<option value="3000m-5000m">3000m->5000m</option>
+							<option value="5000m-3000m">5000m->3000m</option>
+							<option value="5000m-10000m">5000m->10000m</option>
+							<option value="10000m-5000m">10000m->5000m</option>
+							<option value="1500m-10000m">1500m->10000m</option>
+							<option value="10000m-1500m">10000m->1500m</option>
+						</select>
+					</div>
+				</div>
+				<div class="time input">
+					<label for="time">Enter your time</label>
+					<div class="d-flex justify-content-center">
+						<input class="form-control" style="width: auto; text-align: center; margin: auto;" id="time" name="time" type="text" value="" placeholder="Your time"/>
+					</div>
+				</div>
+				<div style="margin: 10px;">
+					<button style="margin: auto;" type="submit" value="convert" class="btn btn-success">
+						Convert
+					</button>
+				</div>
+			</form>
+		</div>
+	</div>
+</div>
+</div>
+
+{% endblock %}

@@ -1,0 +1,83 @@
+{% extends 'Home/base.html' %}
+{% block content %}
+<div style=" color: #dedede; ">
+<div class="container text-center">
+	<!-- display: flex; flex-direction: column;-->
+	<h1>Welcome to runconverter.com!</h1>
+	<br>
+	<h4>A simple but powerful website with tons of running conversions</h4>
+	<br>
+
+	<a href="#calculators" class="btn container text-center alert alert-primary" style="box-shadow: 0px 0px 15px; width: fit-content; border-radius: 25px;">
+	<h1>Select Calculator</h1>
+	<svg class="bi bi-cursor" width="6em" height="6em" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+		<path fill-rule="evenodd" d="M14.082 2.182a.5.5 0 0 1 .103.557L8.528 15.467a.5.5 0 0 1-.917-.007L5.57 10.694.803 8.652a.5.5 0 0 1-.006-.916l12.728-5.657a.5.5 0 0 1 .556.103zM2.25 8.184l3.897 1.67a.5.5 0 0 1 .262.263l1.67 3.897L12.743 3.52 2.25 8.184z"/>
+	  </svg>
+	</a>  
+
+	<br>
+	<br>
+
+	<div class=" container text-center alert alert-primary" style="box-shadow: 0px 0px 15px; width: fit-content; border-radius: 25px;">
+	<h1>Enter Time</h1>
+	<svg class="bi bi-watch" style="margin: 2em;" width="5em" height="5em" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+		<path fill-rule="evenodd" d="M4 14.333v-1.86A5.985 5.985 0 0 1 2 8c0-1.777.772-3.374 2-4.472V1.667C4 .747 4.746 0 5.667 0h4.666C11.253 0 12 .746 12 1.667v1.86A5.985 5.985 0 0 1 14 8a5.985 5.985 0 0 1-2 4.472v1.861c0 .92-.746 1.667-1.667 1.667H5.667C4.747 16 4 15.254 4 14.333zM13 8A5 5 0 1 0 3 8a5 5 0 0 0 10 0z"/>
+		<rect width="1" height="2" x="13.5" y="7" rx=".5"/>
+		<path fill-rule="evenodd" d="M8 4.5a.5.5 0 0 1 .5.5v3a.5.5 0 0 1-.5.5H6a.5.5 0 0 1 0-1h1.5V5a.5.5 0 0 1 .5-.5z"/>
+	</svg>
+</div>
+
+	<br>
+
+	<div class="container text-center alert alert-primary" style="box-shadow: 0px 0px 15px; width: fit-content; border-radius: 25px;">
+	<h1>Convert!</h1>
+	  <svg class="bi bi-check" width="8em" height="8em" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+		<path fill-rule="evenodd" d="M10.97 4.97a.75.75 0 0 1 1.071 1.05l-3.992 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093 3.473-4.425a.236.236 0 0 1 .02-.022z"/>
+	  </svg>
+	</div>
+
+	<br>
+</div>
+</div>
+
+<!--Calculator section-->
+<div id="calculators" style="color: black; background-color: #dedede; width: 100%; ">
+
+	<div class="container text-center" style=" width: 75%; margin-top: 2em; margin-bottom: 2em; color: blanchedalmond; padding: 2em; border-radius: 25px; background-color:#3351a6;
+	box-shadow: 0px 0px 5px black;">
+		<p>
+			The pace calculator enables you to calculate your per mile or per kilometer pace based on a specified distance
+			and time. You can also customize your splits distance by using the custom pace calculator!
+		</p>
+		<a class="btn" style="background-color: #2f2d38; color: blanchedalmond;" href="/pace/" role="button">Pace Calculator</a>
+	</div>
+
+	<div class="container text-center" style=" width: 75%; margin-top: 2em; margin-bottom: 2em; color: blanchedalmond; padding: 2em; border-radius: 25px; background-color:#3351a6;
+	box-shadow: 0px 0px 5px black; ">		
+		<p>
+			The basic calculator is used to convert your race time from one event to another. It is a good starting point
+			to get a rough idea of what you can run in other events.
+		</p>
+		<a class="btn" style="background-color: #2f2d38; color: blanchedalmond;" href="/basic/" role="button">Basic Calculator</a>
+	</div>
+
+	<div class="container text-center" style=" width: 75%; margin-top: 2em; margin-bottom: 2em; color: blanchedalmond; padding: 2em; border-radius: 25px; background-color:#3351a6;
+	box-shadow: 0px 0px 5px black; ">		
+		<p>
+			The advanced calculator lets you specify your event group before you convert your racetimes from one event
+			to another. This gives you a better estimation of what your potential is in other events. It is highly
+			recommended to use this calculator to get the most accurate results. 
+		</p>
+		<a class="btn" style="background-color: #2f2d38; color: blanchedalmond; " href="/advanced/" role="button">Advanced Calculator</a>
+	</div>
+
+	<div class="container text-center" style=" width: 75%; margin-top: 2em; margin-bottom: 2em; color: blanchedalmond; padding: 2em; border-radius: 25px; background-color:#3351a6;
+	box-shadow: 0px 0px 5px black; ">		
+		<p>
+			The track converter will convert your times for undersized, flat, banked, and oversized tracks. This calculator
+			uses the standardized indoor track conversion ratios.
+		</p>
+		<a class="btn" style="background-color: #2f2d38; color: blanchedalmond; " href="/track/" role="button">Track Calculator</a>
+	</div>
+</div>
+{% endblock %}

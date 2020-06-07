@@ -1,0 +1,451 @@
+{% extends 'Home/base.html' %}
+
+{% block content %}
+<div style=" padding:2em; background-color: #3351a6; border-radius: 25px; margin: auto;">
+<div class="container text-center">
+	<h1>Basic Conversion Calculator</h1>
+	<br>
+	<h5>
+		Step 1: Select category
+	</h5>
+	<h5>
+		Step 2: Select event
+	</h5>
+	<h5>
+		Step 3: Enter performance
+	</h5>
+	<h5>
+		Step 4: Convert!
+	</h5>
+	{% if error %}
+	<div class="alert alert-danger alert-dismissible" role="alert">
+		<a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+		{{ error }}
+	</div>
+	{% endif %}
+
+	<!--Displays results-->
+	<div>
+		<!--55m results-->
+		<div>
+			{% if fiftyfive %}
+			<div class="alert alert-success" role="alert">
+				<h1>{{ original }} for 55m converts to...</h1>
+				<ul>
+					<li>60m: {{ 60m }}</li>
+					<li>100m: {{ 100m }}</li>
+				</ul>
+			</div>
+			{% endif %}
+		</div>
+
+		<!--60m results-->
+		<div>
+			{% if sixty %}
+			<div class="alert alert-success" role="alert">
+				<h1>{{ original }} for 60m converts to...</h1>
+				<ul>
+					<li>55m: {{ 55m }}</li>
+					<li>100m: {{ 100m }}</li>
+				</ul>
+			</div>
+			{% endif %}
+		</div>
+
+		<!--100m results-->
+		<div>
+			{% if onehundred %}
+			<div class="alert alert-success" role="alert">
+				<h1>{{ original }} for 100m converts to...</h1>
+				<ul>
+					<li>55m: {{ 55m }}</li>
+					<li>60m: {{ 60m }}</li>
+					<li>200m: {{ 200m }}</li>
+				</ul>
+			</div>
+			{% endif %}
+		</div>
+
+		<!--200m results-->
+		<div>
+			{% if twohundred %}
+			<div class="alert alert-success" role="alert">
+				<h1>{{ original }} for 200m converts to...</h1>
+				<ul>
+					<li>100m: {{ 100m }}</li>
+					<li>300m: {{ 300m }}</li>
+				</ul>
+			</div>
+			{% endif %}
+		</div>	
+
+		<!--300m results-->
+		<div>
+			{% if threehundred %}
+			<div class="alert alert-success" role="alert">
+				<h1>{{ original }} for 300m converts to...</h1>
+				<ul>
+					<li>200m: {{ 200m }}</li>
+					<li>400m: {{ 400m }}</li>
+				</ul>
+			</div>
+			{% endif %}
+		</div>
+
+		<!--400m results-->
+		<div>
+			{% if fourhundred %}
+			<div class="alert alert-success" role="alert">
+				<h1>{{ original }} for 400m converts to...</h1>
+				<ul>
+					<li>300m: {{ 300m }}</li>
+					<li>500m: {{ 500m }}</li>
+					<li>600m: {{ 600m }}</li>
+					<li>800m: {{ 800m }}</li>
+				</ul>
+			</div>
+			{% endif %}
+		</div>
+		
+		<!--500m results-->
+		<div>
+			{% if fivehundred %}
+			<div class="alert alert-success" role="alert">
+				<h1>{{ original }} for 500m converts to...</h1>
+				<ul>
+					<li>400m: {{ 400m }}</li>
+					<li>600m: {{ 600m }}</li>
+					<li>800m: {{ 800m }}</li>
+				</ul>
+			</div>
+			{% endif %}
+		</div>
+
+		<!--600m results-->
+		<div>
+			{% if sixhundred %}
+			<div class="alert alert-success" role="alert">
+				<h1>{{ original }} for 600m converts to...</h1>
+				<ul>
+					<li>400m: {{ 400m }}</li>
+					<li>500m: {{ 500m }}</li>
+					<li>800m: {{ 800m }}</li>
+					<li>1000m: {{ 1000m }}</li>
+				</ul>
+			</div>
+			{% endif %}
+		</div>
+
+		<!--800m results-->
+		<div>
+			{% if eighthundred %}
+			<div class="alert alert-success" role="alert">
+				<h1>{{ original }} for 800m converts to...</h1>
+				<ul>
+					<li>400m: {{ 400m }}</li>
+					<li>600m: {{ 600m }}</li>
+					<li>1000m: {{ 1000m }}</li>
+					<li>1500m: {{ 1500m }}</li>
+					<li>1600m: {{ 1600m }}</li>
+					<li>Mile: {{ Mile }}</li>
+				</ul>
+			</div>
+			{% endif %}
+		</div>
+
+		<!--1000m results-->
+		<div>
+			{% if onethousand %}
+			<div class="alert alert-success" role="alert">
+				<h1>{{ original }} for 1000m converts to...</h1>
+				<ul>
+					<li>600m: {{ 600m }}</li>
+					<li>800m: {{ 800m }}</li>
+					<li>1500m: {{ 1500m }}</li>
+					<li>1600m: {{ 1600m }}</li>
+					<li>Mile: {{ Mile }}</li>
+				</ul>
+			</div>
+			{% endif %}
+		</div>
+
+		<!--1500m results-->
+		<div>
+			{% if fifteenhundred %}
+			<div class="alert alert-success" role="alert">
+				<h1>{{ original }} for 1500m converts to...</h1>
+				<ul>
+					<li>800m: {{ 800m }}</li>
+					<li>1000m: {{ 1000m }}</li>
+					<li>1600m: {{ 1600m }}</li>
+					<li>Mile: {{ Mile }}</li>
+					<li>2000m: {{ 2000m }}</li>
+					<li>3000m: {{ 3000m }}</li>
+					<li>3200m: {{ 3200m }}</li>
+					<li>2mile: {{ 2mile }}</li>
+					<li>3mile: {{ 3mile }}</li>
+					<li>5000m: {{ 5000m }}</li>
+				</ul>
+			</div>
+			{% endif %}
+		</div>
+
+		<!--1600m results-->
+		<div>
+			{% if sixteenhundred %}
+			<div class="alert alert-success" role="alert">
+				<h1>{{ original }} for 1600m converts to...</h1>
+				<ul>
+					<li>800m: {{ 800m }}</li>
+					<li>1000m: {{ 1000m }}</li>
+					<li>1500m: {{ 1500m }}</li>
+					<li>Mile: {{ Mile }}</li>
+					<li>2000m: {{ 2000m }}</li>
+					<li>3000m: {{ 3000m }}</li>
+					<li>3200m: {{ 3200m }}</li>
+					<li>2mile: {{ 2mile }}</li>
+					<li>3mile: {{ 3mile }}</li>
+					<li>5000m: {{ 5000m }}</li>
+				</ul>
+			</div>
+			{% endif %}
+		</div>
+
+		<!--Mile results-->
+		<div>
+			{% if mileres %}
+			<div class="alert alert-success" role="alert">
+				<h1>{{ original }} for a Mile converts to...</h1>
+				<ul>
+					<li>800m: {{ 800m }}</li>
+					<li>1000m: {{ 1000m }}</li>
+					<li>1500m: {{ 1500m }}</li>
+					<li>1600m: {{ 1600m }}</li>
+					<li>2000m: {{ 2000m }}</li>
+					<li>3000m: {{ 3000m }}</li>
+					<li>3200m: {{ 3200m }}</li>
+					<li>2mile: {{ 2mile }}</li>
+					<li>3mile: {{ 3mile }}</li>
+					<li>5000m: {{ 5000m }}</li>
+				</ul>
+			</div>
+			{% endif %}
+		</div>
+
+		<!--2000m results-->
+		<div>
+			{% if twothousand %}
+			<div class="alert alert-success" role="alert">
+				<h1>{{ original }} for 2000m converts to...</h1>
+				<ul>
+					<li>1500m: {{ 1500m }}</li>
+					<li>1600m: {{ 1600m }}</li>
+					<li>Mile: {{ Mile }}</li>
+					<li>3000m: {{ 3000m }}</li>
+					<li>3200m: {{ 3200m }}</li>
+					<li>2mile: {{ 2mile }}</li>
+					<li>3mile: {{ 3mile }}</li>
+					<li>5000m: {{ 5000m }}</li>
+				</ul>
+			</div>
+			{% endif %}
+		</div>
+
+		<!--3000m results-->
+		<div>
+			{% if threethousand %}
+			<div class="alert alert-success" role="alert">
+				<h1>{{ original }} for 3000m converts to...</h1>
+				<ul>
+					<li>1500m: {{ 1500m }}</li>
+					<li>1600m: {{ 1600m }}</li>
+					<li>Mile: {{ Mile }}</li>
+					<li>2000m: {{ 2000m }}</li>
+					<li>3200m: {{ 3200m }}</li>
+					<li>2mile: {{ 2mile }}</li>
+					<li>3mile: {{ 3mile }}</li>
+					<li>5000m: {{ 5000m }}</li>
+					<li>10000m: {{ 10000m }}</li>
+				</ul>
+			</div>
+			{% endif %}
+		</div>
+
+		<!--3200m results-->
+		<div>
+			{% if thirtytwohundred %}
+			<div class="alert alert-success" role="alert">
+				<h1>{{ original }} for 3200m converts to...</h1>
+				<ul>
+					<li>1500m: {{ 1500m }}</li>
+					<li>1600m: {{ 1600m }}</li>
+					<li>Mile: {{ Mile }}</li>
+					<li>2000m: {{ 2000m }}</li>
+					<li>3000m: {{ 3000m }}</li>
+					<li>2mile: {{ 2mile }}</li>
+					<li>3mile: {{ 3mile }}</li>
+					<li>5000m: {{ 5000m }}</li>
+					<li>10000m: {{ 10000m }}</li>
+				</ul>
+			</div>
+			{% endif %}
+		</div>
+
+		<!--2mile results-->
+		<div>
+			{% if twomile %}
+			<div class="alert alert-success" role="alert">
+				<h1>{{ original }} for 2 miles converts to...</h1>
+				<ul>
+					<li>1500m: {{ 1500m }}</li>
+					<li>1600m: {{ 1600m }}</li>
+					<li>Mile: {{ Mile }}</li>
+					<li>2000m: {{ 2000m }}</li>
+					<li>3000m: {{ 3000m }}</li>
+					<li>3200m: {{ 3200m }}</li>
+					<li>3mile: {{ 3mile }}</li>
+					<li>5000m: {{ 5000m }}</li>
+					<li>10000m: {{ 10000m }}</li>
+				</ul>
+			</div>
+			{% endif %}
+		</div>
+
+		<!--3mile results-->
+		<div>
+			{% if threemile %}
+			<div class="alert alert-success" role="alert">
+				<h1>{{ original }} for 3 miles converts to...</h1>
+				<ul>
+					<li>1500m: {{ 1500m }}</li>
+					<li>1600m: {{ 1600m }}</li>
+					<li>Mile: {{ Mile }}</li>
+					<li>2000m: {{ 2000m }}</li>
+					<li>3000m: {{ 3000m }}</li>
+					<li>3200m: {{ 3200m }}</li>
+					<li>2mile: {{ 2mile }}</li>
+					<li>5000m: {{ 5000m }}</li>
+					<li>10000m: {{ 10000m }}</li>
+				</ul>
+			</div>
+			{% endif %}
+		</div>
+
+		<!--5000m results-->
+		<div>
+			{% if fivethousand %}
+			<div class="alert alert-success" role="alert">
+				<h1>{{ original }} for 5000m converts to...</h1>
+				<ul>
+					<li>1500m: {{ 1500m }}</li>
+					<li>1600m: {{ 1600m }}</li>
+					<li>Mile: {{ Mile }}</li>
+					<li>2000m: {{ 2000m }}</li>
+					<li>3000m: {{ 3000m }}</li>
+					<li>3200m: {{ 3200m }}</li>
+					<li>2mile: {{ 2mile }}</li>
+					<li>3mile: {{ 3mile }}</li>
+					<li>10000m: {{ 10000m }}</li>
+				</ul>
+			</div>
+			{% endif %}
+		</div>
+
+		<!--10000m results-->
+		<div>
+			{% if tenthousand %}
+			<div class="alert alert-success" role="alert">
+				<h1>{{ original }} for 10000m converts to...</h1>
+				<ul>
+					<li>3000m: {{ 3000m }}</li>
+					<li>3200m: {{ 3200m }}</li>
+					<li>2mile: {{ 2mile }}</li>
+					<li>3mile: {{ 3mile }}</li>
+					<li>5000m: {{ 5000m }}</li>
+				</ul>
+			</div>
+			{% endif %}
+		</div>
+
+	</div>
+	
+
+
+	<br>
+	<div style="margin: auto;">
+		<button style="background-color: #dedede;" type="button" class="btn dropdown-toggle" data-toggle="collapse" data-target="#sprint">Sprints</button>
+		<div id="sprint" class="collapse">
+			<form action="{% url 'sprint' %}" method="GET">
+					<div class="Event conversion dropdown">
+						<label for="events">Select Event</label>
+						<div class="input">
+							<select style="width: auto;"class="custom-select" id="events" name="events" required>
+								<option value=""></option>
+								<option value="55m">55m</option>
+								<option value="60m">60m</option>
+								<option value="100m">100m</option>
+								<option value="200m">200m</option>
+								<option value="300m">300m</option>
+								<option value="400m">400m</option>
+								<option value="500m">500m</option>
+							</select>
+						</div>
+					</div>
+					<div class="time input">
+						<label for="time">Enter your time</label>
+						<div class="d-flex justify-content-center">
+							<input class="form-control" style="width: auto; text-align: center; margin: auto;" id="time" name="time" type="text" value="" placeholder="Your time"/>
+						</div>
+					</div>
+					<div style="margin: 10px;">
+						<button style="margin: auto;" type="submit" value="convert" class="btn btn-success">
+							Convert
+						</button>
+					</div>
+				</form>
+		</div>
+	</div>
+	<br>
+	<div style="margin: auto;">
+		<button style="background-color: #dedede;" type="button" class="btn dropdown-toggle" data-toggle="collapse" data-target="#distance">Distance</button>
+		<div id="distance" class="collapse">
+			<form action="{% url 'distance' %}" method="GET">
+					<div class="Event conversion dropdown">
+						<label for="events">Select Event</label>
+						<div class="input">
+							<select style="width: auto;"class="custom-select" id="events" name="events" required>
+								<option value=""></option>
+								<option value="600m">600m</option>
+								<option value="800m">800m</option>
+								<option value="1000m">1000m</option>
+								<option value="1500m">1500m</option>
+								<option value="1600m">1600m</option>
+								<option value="Mile">Mile</option>
+								<option value="2000m">2000m</option>
+								<option value="3000m">3000m</option>
+								<option value="3200m">3200m</option>
+								<option value="2mile">2mile</option>
+								<option value="3mile">3mile</option>
+								<option value="5000m">5000m</option>
+								<option value="10000m">10000m</option>
+							</select>
+						</div>
+					</div>
+					<div class="time input">
+						<label for="time">Enter your time</label>
+						<div class="d-flex justify-content-center">
+							<input class="form-control" style="width: auto; text-align: center; margin: auto;" id="time" name="time" type="text" value="" placeholder="Your time"/>
+						</div>
+					</div>
+					<div style="margin: 10px;">
+						<button style="margin: auto;" type="submit" value="convert" class="btn btn-success">
+							Convert
+						</button>
+					</div>
+				</form>
+		</div>
+	</div>
+
+</div>
+</div>
+{% endblock %}

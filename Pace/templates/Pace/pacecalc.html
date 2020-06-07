@@ -1,0 +1,174 @@
+{% extends 'Home/base.html' %}
+{% block content %}
+
+<body style="background-color: blanchedalmond; ">
+<div class="container text-center">
+<br>
+<div style=" padding:2em; background-color: #3351a6; border-radius: 25px; margin: auto;">
+<h1>
+	Pace Calculator
+</h1>
+<h5>
+	Step 1: Select type
+</h5>
+<h5>
+	Step 2: Enter distance
+</h5>
+<h5>
+	Step 3: Enter time
+</h5>
+<h5>
+	Step 4: Convert!
+</h5>
+<br>
+{% if error %}
+<div class="alert alert-danger alert-dismissible" role="alert">
+	<a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+	{{ error }}
+</div>
+{% endif %}
+
+<!--Displays results-->
+<div>
+<div>
+	{% if goaltimekm %}
+	<div class="alert alert-success" role="alert">
+
+		<h1>{{ goaltimekm }} for {{ distance }} km converts to...</h1>
+		<ul>
+			<li>{{ permile }}/mile</li>
+			<li>{{ perkm }}/km</li>
+		</ul>
+	</div>
+	{% endif %}
+</div>
+
+<div>
+	{% if goaltimemiles %}
+	<div class="alert alert-success" role="alert">
+
+		<h1>{{ goaltimemiles }} for {{ distance }} miles converts to...</h1>
+		<ul>
+			<li><strong>{{ permile }}/mile</strong></li>
+			<li><strong>{{ perkm }}/km</strong></li>
+		</ul>
+	</div>
+	{% endif %}
+</div>
+
+<div>
+	{% if split_mm %}
+	<div class="alert alert-success" role="alert">
+
+		<h1>{{ original }} for {{ originald }}m converts to...</h1>
+		<ul>
+			<h5>{{ split_t }}/{{ splitd }}m</h5>
+		</ul>
+	</div>
+	{% endif %}
+</div>
+
+<div>
+	{% if split_kmm %}
+	<div class="alert alert-success" role="alert">
+
+		<h1>{{ original }} for {{ originald }}km converts to...</h1>
+		<ul>
+			<h5>{{ split_t }}/{{ splitd }}m</h5>
+		</ul>
+	</div>
+	{% endif %}
+</div>
+
+<div>
+	{% if split_mim %}
+	<div class="alert alert-success" role="alert">
+
+		<h1>{{ original }} for {{ originald }}miles converts to...</h1>
+		<ul>
+			<h5>{{ split_t }}/{{ splitd }}m</h5>
+		</ul>
+	</div>
+	{% endif %}
+</div>
+</div>
+
+<div style="margin: auto;">
+	<button type="button" style="background-color: #dedede;" class="btn dropdown-toggle" data-toggle="collapse" data-target="#pace">Standard</button>
+	<div id="pace" class="collapse">
+		<form action="{% url 'calculatepace' %}" method="GET">
+				<div class="distance input">
+					<label for="type">Enter Distance</label>
+					<div class="d-flex justify-content-center">
+						<input class="form-control" style="width: auto; text-align: center; margin-right: 10px;" id="distance" name="distance" type="text" value="" placeholder="Distance"/>
+						<select style="width: auto;"class="custom-select" id="type" name="type" required>
+							<option value=""></option>
+							<option value="Miles">Miles</option>
+							<option value="Km">Km</option>
+						</select>
+					</div>
+				</div>
+				<div class="KmorMile">
+					<div class="input">
+
+					</div>
+				</div>
+				<div class="time input">
+					<label for="time">Enter time</label>
+					<div class="d-flex justify-content-center">
+						<input class="form-control" style="width: auto; text-align: center; margin: auto;" id="time" name="time" type="text" value="" placeholder="Your time"/>
+					</div>
+				</div>
+				<div style="margin: 10px;">
+					<button style="margin: auto;" type="submit" value="convert" class="btn btn-success">
+						Convert
+					</button>
+				</div>
+			</form>
+	</div>
+</div>
+<br>
+<div style="margin: auto;">
+	<button type="button" style="background-color: #dedede;" class="btn dropdown-toggle" data-toggle="collapse" data-target="#splits">Custom</button>
+	<div id="splits" class="collapse">
+		<form action="{% url 'calculatesplits' %}" method="GET">
+				<div class="distance input">
+					<label for="type">Enter Distance</label>
+					<div class="d-flex justify-content-center">
+						<input class="form-control" style="width: auto; text-align: center; margin-right: 10px;" id="distance" name="distance" type="text" value="" placeholder="Distance"/>
+						<select style="width: auto;"class="custom-select" id="type" name="type" required>
+							<option value=""></option>
+							<option value="M">M</option>
+							<option value="Miles">Miles</option>
+							<option value="Km">Km</option>
+						</select>
+					</div>
+				</div>
+				<div class="split input">
+					<label for="split">Split Frequency</label>
+					<div class="d-flex justify-content-center">
+						<input class="form-control" style="width: auto; text-align: center; margin-right: 10px;" id="splitdistance" name="splitdistance" type="text" value="" placeholder="Split"/>
+						<select style="width: auto;"class="custom-select" id="splittype" name="splittype" required>
+							<option value="M">M</option>
+						</select>
+					</div>
+				</div>
+				<div class="time input">
+					<label for="time">Enter time</label>
+					<div class="d-flex justify-content-center">
+						<input class="form-control" style="width: auto; text-align: center; margin: auto;" id="time" name="time" type="text" value="" placeholder="Your time"/>
+					</div>
+				</div>
+				<div style="margin: 10px;">
+					<button style="margin: auto;" type="submit" value="convert" class="btn btn-success">
+						Convert
+					</button>
+				</div>
+			</form>
+	</div>
+</div>
+
+</div>
+</div>
+</body>
+{% endblock %}
